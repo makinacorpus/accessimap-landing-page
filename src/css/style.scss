@@ -141,8 +141,11 @@ header {
   background: $grey;
   color: white;
   font-style: italic;
-  padding: 12px 0;
   text-align: center;
+  overflow: hidden;
+  .row {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -234,4 +237,8 @@ header {
     max-height: 80px;
   }
 
+}
+
+.formulaire {
+  text-align: center;
 }
