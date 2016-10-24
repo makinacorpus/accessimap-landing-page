@@ -1,0 +1,188 @@
+.button {
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+  margin: 20px 0;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: #DC3B54;
+  color: #fff;
+  transition: background-color .3s; }
+
+.button:hover, .button:focus {
+  background-color: #c1233b; }
+
+.button > * {
+  position: relative; }
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.button:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out; }
+
+.button.blue {
+  background-color: #006996; }
+  .button.blue:hover, .button.blue:focus {
+    background-color: #004563; }
+  .button.blue:hover, .button.blue:focus {
+    background-color: #004563; }
+
+.button.red {
+  background-color: #DC3B54; }
+
+/* Styles, not important */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #343433;
+  margin: 0;
+  padding: 0;
+  line-height: 150%; }
+
+h1 {
+  font-weight: 300; }
+
+img, iframe {
+  max-width: 100%;
+  margin: 10px auto; }
+
+legend {
+  color: #676766;
+  font-style: italic; }
+
+.accessimap {
+  font-family: 'Roboto Slab', serif; }
+
+.row {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto; }
+
+header .logo {
+  padding: 20px 0 10px 0;
+  text-align: center; }
+  header .logo img {
+    height: 140px; }
+
+header .intro {
+  font-weight: 300;
+  display: flex;
+  background: url("../img/ricepaper2.png");
+  overflow: hidden;
+  padding: 0;
+  position: relative; }
+  header .intro strong {
+    font-weight: bold; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    header .intro {
+      background: url("../img/ricepaper2_@2X.png"); } }
+  header .intro img {
+    width: 50%;
+    height: 50%;
+    margin: 0; }
+  header .intro .demo {
+    position: absolute;
+    z-index: 100;
+    background: url("../img/demo.png") center center;
+    background-size: cover;
+    width: 50%;
+    top: 0;
+    bottom: 0; }
+  header .intro .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    margin-left: 50%;
+    width: 50%;
+    padding: 40px;
+    max-width: 590px; }
+
+.footer {
+  background: #343433;
+  color: white;
+  font-style: italic;
+  font-size: 80%;
+  padding-bottom: 20px;
+  text-align: center; }
+  .footer::before {
+    content: '';
+    height: 40px;
+    width: 100%;
+    display: block;
+    background: url("../img/ricepaper2.png");
+    position: relative; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .footer::before {
+        background: url("../img/ricepaper2_@2X.png"); } }
+
+section {
+  padding: 40px 0; }
+  section > .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  @media screen and (min-width: 960px) {
+    section.editor > .row, section.reader > .row {
+      flex-direction: row; } }
+
+.editor .icon {
+  margin: 30px;
+  width: 80px; }
+
+.reader .icon {
+  margin: 20px;
+  width: 100px; }
+
+.videos {
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center; }
+  .videos legend {
+    margin: 0 auto; }
+
+.partenaires {
+  text-align: center; }
+  .partenaires h3 {
+    margin-top: 60px; }
+  .partenaires ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  .partenaires li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 20%;
+    padding: 16px; }
+  .partenaires img {
+    max-height: 80px; }

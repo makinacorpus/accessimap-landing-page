@@ -1,0 +1,190 @@
+// Colors
+$blue: #006996;
+$red: #DC3B54;
+$green: #B6D038;
+$grey: #343433;
+
+@import 'buttons';
+
+/* Styles, not important */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: $grey;
+  margin: 0;
+  padding: 0;
+  line-height: 150%;
+}
+
+h1 {
+  font-weight: 300;
+  // color: $green;
+}
+
+img, iframe {
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+legend {
+  color: lighten($grey, 20%);
+  font-style: italic;
+}
+
+.accessimap {
+  font-family: 'Roboto Slab', serif;
+}
+
+.row {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+header {
+  .logo {
+    padding: 20px 0 10px 0;
+    text-align: center;
+    img {
+      height: 140px;
+    }
+  }
+
+  .intro {
+    font-weight: 300;
+
+    strong {
+      font-weight: bold;
+    }
+    display: flex;
+    background: url('../img/ricepaper2.png');
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background: url('../img/ricepaper2_@2X.png');
+    }
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    img {
+      width: 50%;
+      height: 50%;
+      margin: 0;
+    }
+
+    .demo {
+      position: absolute;
+      z-index: 100;
+      background: url('../img/demo.png') center center;
+      background-size: cover;
+      width: 50%;
+      top: 0;
+      bottom: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+      margin-left: 50%;
+      width: 50%;
+      padding: 40px;
+      max-width: 590px;
+    }
+  }
+}
+
+.footer {
+  background: $grey;
+  color: white;
+  font-style: italic;
+  font-size: 80%;
+  padding-bottom: 20px;
+  text-align: center;
+  &::before {
+    content: '';
+    height: 40px;
+    width: 100%;
+    display: block;
+    background: url('../img/ricepaper2.png');
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background: url('../img/ricepaper2_@2X.png');
+    }
+    position: relative;
+  }
+}
+
+
+section {
+  padding: 40px 0;
+  > .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  @media screen and (min-width: 960px) {
+    &.editor > .row, &.reader > .row {
+      flex-direction: row;
+    }
+  }
+}
+
+.editor {
+  .icon {
+    margin: 30px;
+    width: 80px;
+  }
+}
+
+.reader {
+  .icon {
+    margin: 20px;
+    width: 100px;
+  }
+}
+
+.videos {
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  legend {
+    margin: 0 auto;
+  }
+}
+
+.partenaires {
+  text-align: center;
+  h3 {
+    margin-top: 60px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 20%;
+    padding: 16px;
+  }
+
+  img {
+    max-height: 80px;
+  }
+
+}
