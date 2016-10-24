@@ -62,9 +62,13 @@ html, body {
   color: #343433;
   margin: 0;
   padding: 0;
-  line-height: 150%; }
+  line-height: 150%;
+  font-weight: 300; }
 
-h1 {
+strong {
+  font-weight: 500; }
+
+h1, h3 {
   font-weight: 300; }
 
 img, iframe {
@@ -78,87 +82,123 @@ legend {
 .accessimap {
   font-family: 'Roboto Slab', serif; }
 
+.bg-paper {
+  background: url("../img/ricepaper2.png"); }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .bg-paper {
+      background: url("../img/ricepaper2_@2X.png"); } }
+
+section {
+  padding: 20px 0; }
+  @media screen and (min-width: 960px) {
+    section {
+      padding: 20px 0; } }
+
 .row {
   width: 90%;
-  max-width: 1180px;
-  margin: 0 auto; }
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 0; }
 
 header .logo {
-  padding: 20px 0 10px 0;
+  padding: 30px 0 20px 0;
   text-align: center; }
   header .logo img {
-    height: 140px; }
+    height: 180px; }
 
 header .intro {
-  font-weight: 300;
-  display: flex;
-  background: url("../img/ricepaper2.png");
   overflow: hidden;
   padding: 0;
   position: relative; }
-  header .intro strong {
-    font-weight: bold; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    header .intro {
-      background: url("../img/ricepaper2_@2X.png"); } }
   header .intro img {
     width: 50%;
     height: 50%;
     margin: 0; }
-  header .intro .demo {
-    position: absolute;
+  header .intro .photo {
+    width: 100%;
+    height: 300px;
     z-index: 100;
     background: url("../img/demo.png") center center;
     background-size: cover;
-    width: 50%;
     top: 0;
-    bottom: 0; }
+    bottom: 0;
+    position: relative; }
   header .intro .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 10;
-    margin-left: 50%;
-    width: 50%;
-    padding: 40px;
-    max-width: 590px; }
+    padding: 20px 0; }
+  @media screen and (min-width: 960px) {
+    header .intro {
+      display: flex;
+      position: relative; }
+      header .intro::after {
+        content: '';
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        top: 0;
+        height: 80px;
+        background: url("../img/grid.svg");
+        background-size: cover;
+        -webkit-clip-path: polygon(100% 100%, 37% 0, 100% 0);
+        clip-path: polygon(100% 100%, 37% 0, 100% 0);
+        opacity: .3; }
+      header .intro .photo {
+        width: 50%;
+        height: auto;
+        position: absolute; }
+      header .intro .content {
+        margin-left: 50%;
+        width: 50%;
+        padding: 60px 40px;
+        max-width: 590px; } }
 
 .footer {
   background: #343433;
   color: white;
   font-style: italic;
-  font-size: 80%;
-  padding-bottom: 20px;
+  padding: 12px 0;
   text-align: center; }
-  .footer::before {
-    content: '';
-    height: 40px;
-    width: 100%;
-    display: block;
-    background: url("../img/ricepaper2.png");
-    position: relative; }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      .footer::before {
-        background: url("../img/ricepaper2_@2X.png"); } }
 
-section {
-  padding: 40px 0; }
-  section > .row {
+@media screen and (min-width: 960px) {
+  .editor, .reader {
     display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  @media screen and (min-width: 960px) {
-    section.editor > .row, section.reader > .row {
-      flex-direction: row; } }
+    flex-direction: row; } }
 
-.editor .icon {
-  margin: 30px;
+.editor h2, .reader h2 {
+  margin-top: 0; }
+
+.editor .icon, .reader .icon {
   width: 80px; }
 
-.reader .icon {
-  margin: 20px;
-  width: 100px; }
+@media screen and (min-width: 960px) {
+  .editor h2 {
+    margin-top: 0.83em; }
+  .editor .icon {
+    margin: 50px;
+    width: 80px; }
+  .reader h2 {
+    margin-top: 0.83em; }
+  .reader .icon {
+    margin: 40px;
+    width: 100px; } }
+
+.demo {
+  position: relative; }
+  .demo::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    background: url("../img/grid.svg");
+    background-size: cover;
+    -webkit-clip-path: polygon(100% 100%, 0 0, 100% 0);
+    clip-path: polygon(100% 100%, 0 0, 100% 0);
+    opacity: .7; }
 
 .videos {
   flex-direction: row;
@@ -168,9 +208,10 @@ section {
     margin: 0 auto; }
 
 .partenaires {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 40px; }
   .partenaires h3 {
-    margin-top: 60px; }
+    margin-top: 40px; }
   .partenaires ul {
     margin: 0;
     padding: 0;
