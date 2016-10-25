@@ -11,6 +11,10 @@ $grey: #343433;
   box-sizing: border-box;
 }
 
+strong, b {
+  font-weight: 500;
+}
+
 html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -34,7 +38,7 @@ img {
 iframe {
   border: 0;
   overflow: hidden;
-  
+
 }
 
 .legend {
