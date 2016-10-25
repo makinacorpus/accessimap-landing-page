@@ -69,6 +69,7 @@ strong {
   font-weight: 500; }
 
 h1 {
+  font-size: 2.5em;
   font-weight: 300; }
 
 img {
@@ -80,13 +81,13 @@ legend {
   font-style: italic; }
 
 .accessimap {
-  font-family: 'Roboto Slab', serif; }
+  font-family: 'Roboto Slab', 'Roboto', serif; }
 
 .bg-paper {
-  background: url("../img/ricepaper2.png"); }
+  background: url("../img/ricepaper.png"); }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .bg-paper {
-      background: url("../img/ricepaper2_@2X.png"); } }
+      background: url("../img/ricepaper_@2X.png"); } }
 
 section {
   padding: 20px 0; }
@@ -128,17 +129,18 @@ section {
       z-index: 100;
       width: 100%;
       top: 0;
-      height: 80px;
-      background: url("../img/grid.svg");
-      background-size: cover;
-      -webkit-clip-path: polygon(100% 100%, 37% 0, 100% 0);
-      clip-path: polygon(100% 100%, 37% 0, 100% 0);
-      opacity: .3; }
+      left: 0;
+      height: 100%;
+      background: url("../img/grid-r.svg") top right no-repeat;
+      background-size: auto 100px;
+      opacity: .5; }
     .double-col .photo {
       width: 50%;
       height: auto;
       position: absolute; }
     .double-col .content {
+      position: relative;
+      z-index: 200;
       margin-left: 50%;
       width: 50%;
       padding: 60px 40px;
@@ -160,22 +162,6 @@ header .intro {
     margin: 0; }
   header .intro .photo {
     background-image: url("../img/photo2.png"); }
-
-.formulaire {
-  padding: 0; }
-  .formulaire .photo {
-    background-image: url("../img/photo1.png"); }
-  .formulaire .content {
-    padding: 40px; }
-
-.footer {
-  color: #676766;
-  font-style: italic;
-  font-size: 85%;
-  text-align: center;
-  overflow: hidden; }
-  .footer .row {
-    padding: 10px 0; }
 
 @media screen and (min-width: 960px) {
   .editor, .reader {
@@ -201,27 +187,66 @@ header .intro {
     width: 100px; } }
 
 .demo {
-  position: relative; }
+  position: relative;
+  padding: 100px 0; }
+  .demo > * {
+    position: relative;
+    z-index: 3; }
   .demo::before {
     content: '';
     position: absolute;
+    z-index: 1;
     width: 100%;
     top: 0;
-    height: 80px;
-    background: url("../img/grid.svg");
-    background-size: cover;
-    -webkit-clip-path: polygon(100% 100%, 0 0, 100% 0);
-    clip-path: polygon(100% 100%, 0 0, 100% 0);
-    opacity: .7; }
+    left: 0;
+    height: 120px;
+    background: url("../img/grid-r.svg") top right no-repeat;
+    background-size: auto 120px;
+    opacity: .7;
+    -webkit-transform: scaleX(-1);
+    /* Webkit */
+    transform: scaleX(-1); }
+  .demo::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    height: 120px;
+    background: url("../img/grid-r.svg") top right no-repeat;
+    background-size: auto 120px;
+    opacity: .7;
+    -webkit-transform: scaleY(-1);
+    /* Webkit */
+    transform: scaleY(-1); }
 
 .videos {
   flex-direction: row;
   justify-content: space-between;
   text-align: center; }
   .videos iframe {
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 100%; }
   .videos legend {
     margin: 0 auto; }
+
+.formulaire {
+  text-align: center;
+  position: relative;
+  text-align: left;
+  padding: 0; }
+  @media screen and (min-width: 960px) {
+    .formulaire .content {
+      padding: 40px; } }
+  .formulaire::after {
+    display: none; }
+  .formulaire .photo {
+    background-image: url("../img/photo1.png"); }
+  .formulaire iframe {
+    position: relative;
+    z-index: 2;
+    max-width: 420px; }
 
 .partenaires {
   text-align: center;
@@ -237,10 +262,23 @@ header .intro {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    width: 20%;
+    width: 50%;
     padding: 16px; }
+    @media screen and (min-width: 420px) {
+      .partenaires li {
+        width: 33%; } }
+    @media screen and (min-width: 960px) {
+      .partenaires li {
+        width: 20%; } }
   .partenaires img {
     max-height: 80px; }
 
-.formulaire {
-  text-align: center; }
+.footer {
+  color: white;
+  font-style: italic;
+  font-size: 85%;
+  text-align: center;
+  overflow: hidden;
+  background: #006996; }
+  .footer .row {
+    padding: 10px 0; }
