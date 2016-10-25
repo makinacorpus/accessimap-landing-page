@@ -61,10 +61,10 @@
   &:hover, &:focus {
     background-color: darken($blue, 10%);
   }
-  &:hover, &:focus {
-    background-color: darken($blue, 10%);
-  }
 }
 .button.red {
   background-color: $red;
+  &:hover, &:focus {
+    background-color: darken($red, 10%);
+  }
 }

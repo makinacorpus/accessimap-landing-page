@@ -46,11 +46,11 @@
   background-color: #006996; }
   .button.blue:hover, .button.blue:focus {
     background-color: #004563; }
-  .button.blue:hover, .button.blue:focus {
-    background-color: #004563; }
 
 .button.red {
   background-color: #d62843; }
+  .button.red:hover, .button.red:focus {
+    background-color: #ab2036; }
 
 /* Styles, not important */
 *, *:before, *:after {
