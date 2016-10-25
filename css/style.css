@@ -11,12 +11,12 @@
   outline: none;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  background-color: #DC3B54;
+  background-color: #d62843;
   color: #fff;
   transition: background-color .3s; }
 
 .button:hover, .button:focus {
-  background-color: #c1233b; }
+  background-color: #ab2036; }
 
 .button > * {
   position: relative; }
@@ -50,7 +50,7 @@
     background-color: #004563; }
 
 .button.red {
-  background-color: #DC3B54; }
+  background-color: #d62843; }
 
 /* Styles, not important */
 *, *:before, *:after {
