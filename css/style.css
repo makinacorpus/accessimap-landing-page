@@ -275,6 +275,8 @@ header .intro {
     @media screen and (min-width: 960px) {
       .partenaires li {
         width: 20%; } }
+  .partenaires a {
+    display: block; }
   .partenaires img {
     max-height: 80px; }
 
