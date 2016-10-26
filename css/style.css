@@ -151,21 +151,21 @@ section {
       padding: 60px 40px;
       max-width: 590px; } }
 
-header .logo {
+.logo {
   padding: 30px 0 20px 0;
   text-align: center; }
-  header .logo img {
+  .logo img {
     height: 180px; }
 
-header .intro {
+.intro {
   overflow: hidden;
   padding: 0;
   position: relative; }
-  header .intro img {
+  .intro img {
     width: 50%;
     height: 50%;
     margin: 0; }
-  header .intro .photo {
+  .intro .photo {
     background-image: url("../img/photo2.png"); }
 
 @media screen and (min-width: 960px) {
