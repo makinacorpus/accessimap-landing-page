@@ -250,8 +250,7 @@ header .intro {
     background-image: url("../img/photo1.png"); }
   .formulaire iframe {
     position: relative;
-    z-index: 2;
-    max-width: 420px; }
+    z-index: 2; }
 
 .partenaires {
   text-align: center;
